@@ -5,11 +5,52 @@ language: [en]
 tags: [emotion, affect, agents, companion, llm, appraisal, project-nhe]
 ---
 
-# Elysium X 20
+<p align="center">
+  <img src="https://raw.githubusercontent.com/itsppm76/elysium-x20/main/assets/banner.svg" alt="Elysium X 20 - emotion-state engine for AI agents" width="100%">
+</p>
 
-An open-source **emotion-state engine** for AI agents and companion models. Part of [Project NHE](https://projectnhe.tech).
+<p align="center">
+  <a href="LICENSE"><img alt="license" src="https://img.shields.io/badge/license-MIT-111111?style=flat-square&labelColor=2b2b2b"></a>
+  <img alt="python" src="https://img.shields.io/badge/python-3.9%2B-111111?style=flat-square&labelColor=2b2b2b">
+  <img alt="tests" src="https://img.shields.io/badge/tests-16-111111?style=flat-square&labelColor=2b2b2b">
+  <img alt="dependencies" src="https://img.shields.io/badge/dependencies-0-111111?style=flat-square&labelColor=2b2b2b">
+  <a href="https://github.com/itsppm76/elysium-x20"><img alt="github" src="https://img.shields.io/badge/github-elysium--x20-111111?style=flat-square&labelColor=2b2b2b"></a>
+  <a href="https://huggingface.co/itsppm76/Elysium-X-20"><img alt="hugging face" src="https://img.shields.io/badge/hugging%20face-Elysium--X--20-111111?style=flat-square&labelColor=2b2b2b"></a>
+</p>
 
-Elysium X 20 sits between the user and your LLM. It keeps a persistent emotional state, nudges it with every conversation turn, lets it fade over time, and hands you three things to act on: a **system-prompt block**, **style parameters**, and a **memory decision**. No dependencies, pure Python.
+<p align="center">
+  <b>Persistent emotional state for AI agents.</b><br>
+  Appraise a message, update the state, let it decay, and get a prompt block, style parameters and a memory decision back.<br>
+  Part of <a href="https://projectnhe.tech">Project NHE</a>.
+</p>
+
+---
+
+## What it does
+
+Elysium X 20 sits between the user and your LLM. It keeps a persistent emotional state, nudges it with every conversation turn, lets it fade over time, and hands you three things to act on:
+
+| Output | What you get |
+| --- | --- |
+| `prompt_modulator()` | a system-prompt block describing the current state |
+| `style()` | `warmth`, `energy`, `verbosity`, `temperature_delta`, `emoji_ok` |
+| `memory_policy()` | whether to store this turn, with tags and a salience score |
+
+No dependencies. Pure Python.
+
+## Demo
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/itsppm76/elysium-x20/main/assets/demo.svg" alt="Terminal demo of the companion loop" width="860">
+</p>
+
+Real output of `examples/companion_loop.py` (abridged). The LLM call in that example is a stub.
+
+## Architecture
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/itsppm76/elysium-x20/main/assets/architecture.svg" alt="Architecture: appraise, update, state, decay, then prompt, style and memory outputs" width="100%">
+</p>
 
 ## Philosophy
 
@@ -90,3 +131,7 @@ pytest
 ## License
 
 MIT. See `LICENSE`.
+
+---
+
+<p align="center"><sub>ELYSIUM X 20 / PROJECT NHE / MIT</sub></p>
