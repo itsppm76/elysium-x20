@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "elysium-x20"
+version = "0.1.0"
+description = "Elysium X 20: an open-source emotion-state engine for AI agents and companion models."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Pratham Prateek Mohanty (Project NHE)" }]
+
+[project.urls]
+Homepage = "https://github.com/itsppm76/elysium-x20"
+keywords = ["emotion", "affect", "agents", "companion", "llm", "appraisal", "nhe"]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest"]
+hub = ["huggingface_hub"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
